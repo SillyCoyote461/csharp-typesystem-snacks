@@ -1,17 +1,67 @@
 ﻿
 //functions call
-Snack1();
-Snack2();
-Snack3();
-Snack4();
-Snack5();
-Snack6();
-Snack7();
-Snack8();
-Snack9();
-Snack10();
-Snack11();
-Snack12();
+bool exit = false;
+
+do
+{
+    Console.Write("Inserisci il numero dello snack da eseguire da 1 a 12 oppure digita 'esci' per terminare il programma: ");
+    var choice = Console.ReadLine();
+    switch (choice)
+    {
+        case "1":
+            Snack1();
+            break;
+
+        case "2":
+            Snack2();
+            break;
+
+        case "3":
+            Snack3();
+            break;
+
+        case "4":
+            Snack4();
+            break;
+
+        case "5":
+            Snack5();
+            break;
+
+        case "6":
+            Snack6();
+            break;
+
+        case "7":
+            Snack7();
+            break;
+
+        case "8":
+            Snack8();
+            break;
+
+        case "9":
+            Snack9();
+            break;
+
+        case "10":
+            Snack10();
+            break;
+
+        case "11":
+            Snack11();
+            break;
+
+        case "12":
+            Snack12();
+            break;
+
+        case "esci":
+            exit = true;
+            break;
+
+    }
+} while (!exit);
 
 //functions
 void Snack1()
@@ -210,6 +260,9 @@ void Snack12()
     Console.Write("Digit a number: ");
     int num = Convert.ToInt32(Console.ReadLine());
     OddOrEven(num);
+
+    Console.WriteLine("----------------------");
+
 }
 
 void StrLength(string str1, string str2)
