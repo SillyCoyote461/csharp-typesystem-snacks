@@ -1,16 +1,17 @@
 ﻿
 //functions call
-//Snack1();
-//Snack2();
-//Snack3();
-//Snack4();
-//Snack5();
-//Snack6();
-//Snack7();
-//Snack8();
-//Snack9();
+Snack1();
+Snack2();
+Snack3();
+Snack4();
+Snack5();
+Snack6();
+Snack7();
+Snack8();
+Snack9();
 Snack10();
-
+Snack11();
+Snack12();
 
 //functions
 void Snack1()
@@ -169,5 +170,66 @@ void Snack9()
 }
 
 void Snack10(){
+    Console.Write("How many array should we create? ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    Random rnd = new Random();
+    for(int i = 0; i < n; i++)
+    {
+        var numbers = new int[10];
+        for(int j = 0; j < 10; j++)
+        {
+            numbers[j] = rnd.Next(1, 100);
+        }
 
+        foreach (var item in numbers)
+        {
+            Console.Write($"{item}; ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine("----------------------");
+
+}
+
+void Snack11()
+{
+    Console.Write("Write a word: ");
+    string wrd1 = Console.ReadLine() ?? "";
+
+    Console.Write("Write another word: ");
+    string wrd2 = Console.ReadLine() ?? "";
+
+    StrLength(wrd1 , wrd2);
+
+    Console.WriteLine("----------------------");
+}
+
+
+void Snack12()
+{
+    Console.Write("Digit a number: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    OddOrEven(num);
+}
+
+void StrLength(string str1, string str2)
+{
+    if (str1.Length == str2.Length) 
+    {
+        Console.WriteLine("{0} {1}", str1, str2);
+    }
+    else if (str1.Length > str2.Length)
+    {
+        Console.WriteLine("{0}", str1);
+    }
+    else
+    {
+        Console.WriteLine("{0}", str2);
+    }
+}
+
+void OddOrEven(int n)
+{
+    if (n % 2 is 0) Console.WriteLine("The number {0} is even", n);
+    else Console.WriteLine("The number {0} is odd", n);
 }
