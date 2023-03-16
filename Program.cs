@@ -18,22 +18,22 @@ void Snack1()
 {
     Console.Write("Digit the first number: ");
     int n1 = Convert.ToInt32(Console.ReadLine());
+    
+    Console.Write("Digit the second number: ");
+    int n2 = Convert.ToInt32(Console.ReadLine());
+    if (n1 == n2)
     {
-        Console.Write("Digit the second number: ");
-        int n2 = Convert.ToInt32(Console.ReadLine());
-        if (n1 == n2)
-        {
-            Console.WriteLine($"Both numbers are equals to: {n1}");
-        }
-        else if(n1 > n2)
-        {
-            Console.WriteLine($"The greater number is: {n1}");
-        }
-        else
-        {
-            Console.WriteLine($"The greater number is: {n2}");   
-        }
+        Console.WriteLine($"Both numbers are equals to: {n1}");
     }
+    else if(n1 > n2)
+    {
+        Console.WriteLine($"The greater number is: {n1}");
+    }
+    else
+    {
+        Console.WriteLine($"The greater number is: {n2}");   
+    }
+    
     Console.WriteLine("----------------------");
 }
 
@@ -41,19 +41,19 @@ void Snack2()
 {
     Console.Write("Write a word: ");
     string s1 = Console.ReadLine() ?? "";
-    {
-        Console.Write("Write another word: ");
-        string s2 = Console.ReadLine() ?? "";
+    
+    Console.Write("Write another word: ");
+    string s2 = Console.ReadLine() ?? "";
         
-        if(s1.Length < s2.Length)
-        {
-            Console.WriteLine("{0} {1}", s1, s2);
-        }
-        else
-        {
-            Console.WriteLine("{0} {1}", s2, s1);
-        }
+    if(s1.Length < s2.Length)
+    {
+        Console.WriteLine("{0} {1}", s1, s2);
     }
+    else
+    {
+        Console.WriteLine("{0} {1}", s2, s1);
+    }
+    
     Console.WriteLine("----------------------");
 
 }
@@ -157,15 +157,15 @@ void Snack8()
 void Snack9()
 {
     int[] numbers = new int[60];
+    
+    int i = 0;
+    do
     {
-        int i = 0;
-        do
-        {
-            Console.Write("Digit a number: ");
-            numbers[i] = Convert.ToInt32(Console.ReadLine());
-            i++;
-        }while (i < 50);
-    }
+        Console.Write("Digit a number: ");
+        numbers[i] = Convert.ToInt32(Console.ReadLine());
+        i++;
+    }while (i < 50);
+    
     Console.WriteLine("----------------------");
 }
 
